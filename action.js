@@ -3,9 +3,35 @@ TODO:
  1) Create dots for each hour on the face of the clock
  */
 
- var sec_hand = document.querySelector('div#sec-hand');
- var min_hand = document.querySelector('div#min-hand');
- var hour_hand = document.querySelector('div#hour-hand');
+// var ctn = document.querySelector('div#clock-face');
+
+// var coordinates = [
+//     // top, left
+//     // 3
+//     [142, 284],
+//     // 6
+//     [284, 142],
+//     // 9
+//     [142, 0],
+//     // 12
+//     [0,142]
+// ]
+
+// coordinates.forEach( (coordinate) => {
+//     ctn.insertAdjacentHTML('beforeend', `
+//     <div class="dots" 
+//     style="top:${coordinate[0]}px; left:${coordinate[1]}px">
+//     </div>
+// `)
+// })
+
+
+
+
+
+var sec_hand = document.querySelector('div#sec-hand');
+var min_hand = document.querySelector('div#min-hand');
+var hour_hand = document.querySelector('div#hour-hand');
 
 
 function timer() {
@@ -24,4 +50,5 @@ function timer() {
     hour_hand.style.transform = `rotate(${hourDegrees}deg`;
 }
 
-setInterval(timer, 1000)
+setInterval(timer, 1000);
+
