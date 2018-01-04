@@ -28,7 +28,7 @@ div.hand {
     transform-origin: 100%;
     transform: rotate(90deg);
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-    transition: all 0.05s;
+    transition-duration: 0.05s;
 }
 
 div#sec-hand {
