@@ -1,6 +1,10 @@
 body {
-    background: url('bg.jpg');
-    background-size: 100% 100%;
+    background-color: #DFCAC5; /* fallback */
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -11,14 +15,24 @@ body {
 div#clock-face {
     margin: auto;
     border-radius: 100%;
-    border: 30px solid #4C3E61;
-    height: 300px;
-    width: 300px;
+    height: 40vw;
+    max-height: 400px;
+    width: 40vw;
+    max-width: 400px;
     position: relative;
+}
+@media screen and (max-width: 1600px) {
+    div#clock-face {
+        border: calc(10px + 2vw) solid #4C3E61;
+    }
+}
+@media screen and (min-width: 1600px) {
+    div#clock-face {
+        border: 42px solid #4C3E61;
+    }
 }
 
 div.hand {
-    width: 130px;
     border: 5px solid transparent;
     position: absolute;
     top: 50%;
@@ -31,21 +45,34 @@ div.hand {
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     transition-duration: 0.05s;
 }
+@media screen and (max-width: 550px) {
+    div.hand {
+        border: 3px solid transparent;
+    }
+}
+@media screen and (min-width: 550px) {
+    div.hand {
+        border: 5px solid transparent;
+    }
+}
 
 div#sec-hand {
-    width: 140px;
+    width: 18vw;
+    max-width: 180px;
     border-color: rgb(109, 86, 102);
     z-index: 1;
 }
 
 div#min-hand {
-    width: 120px;
+    width: 15vw;
+    max-width: 160px;
     border-color: rgb(139, 116, 132);
     z-index: 2;
 }
 
 div#hour-hand {
-    width: 100px;
+    width: 12vw;
+    max-width: 140px;
     border-color: rgb(169, 146, 162);
     z-index: 3;
 }

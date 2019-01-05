@@ -46,8 +46,10 @@ function timer() {
     min_hand.style.transform = `rotate(${minDegrees}deg`;
 
     let hours = now.getHours();
-    let hourDegrees = ((hours / 24) * 360) + 90;
+    let hourDegrees = ((hours / 12) * 360) + 90;
     hour_hand.style.transform = `rotate(${hourDegrees}deg`;
+
+    console.log(hours, minutes, seconds)
 }
 
 setInterval(timer, 1000);
